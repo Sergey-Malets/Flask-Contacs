@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="alert alert-info">
+        <h2>Компания: {{ contact.title }}</h2><br>
+        <h2>Контактное лицо: {{ contact.name }}</h2><br>
+        <h2>Телефон: <a href="tel:{{ contact.tel }}">{{ contact.tel }}</a> </h2><br>
+        <h2>Сайт: <a href="{{ contact.url }}">{{ contact.url }}</a></h2><br>
+        <a href="/table_contacts/{{ contact.id }}/delete" class="btn btn-danger">Удалить</a></p>
+        <a href="/table_contacts/{{ contact.id }}/update" class="btn btn-success">Редактировать</a></p>
+    </div>
+</div>
+{% endblock %}

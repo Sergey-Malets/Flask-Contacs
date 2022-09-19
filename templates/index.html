@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Добавить контакт</h1>
+    <form method="post">
+        <input type="text" name="name" id="name" class="container form-control" placeholder="контактное лицо"><br>
+        <input type="text" name="title" id="title" class="container form-control" placeholder="наименование компании"><br>
+        <input type="tel" name="tel" id="tel" class="container form-control" placeholder="номер телефона в международном формате"><br>
+        <input type="url" name="url" id="url" class="container form-control" placeholder="сайт компании"><br>
+        <input type="submit" class="btn btn-info" value="Сохранить">
+    </form>
+
+</div>
+{% endblock %}

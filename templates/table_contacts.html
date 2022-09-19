@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Таблица контактов</h1>
+    {% if contacts|length > 0 %}
+    {% for el in contacts %}
+    <div class="alert alert-info">
+        <h2>{{ el.name }}</h2>
+        <p>{{ el.tel }}
+        <a href="/table_contacts/{{ el.id }}" class="btn btn-warning">Детальнее</a></p>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>У нас еще нет контактов</p>
+    {% endif %}
+
+</div>
+{% endblock %}
